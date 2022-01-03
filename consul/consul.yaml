@@ -1,0 +1,36 @@
+global:
+  name: consul
+  acls:
+    manageSystemACLs: false
+  gossipEncryption:
+    autoGenerate: true
+server:
+  replicas: 1
+ui:
+  enabled: true
+connectInject:
+  enabled: true
+  default: false
+controller:
+  enabled: true
+ingressGateways:  
+  enabled: true 
+  gateways:    
+  - name: chargers-ingress-gateway  
+    replicas: 1    
+    service:        
+      type: LoadBalancer
+    ports:
+      - 8081
+  - name: comments-ingress-gateway
+    replicas: 1    
+    service:
+      type: LoadBalancer
+    ports:
+      - 8082
+  - name: reservations-ingress-gateway
+    replicas: 1
+    service:
+      type: LoadBalancer
+    ports:
+      - 8083
