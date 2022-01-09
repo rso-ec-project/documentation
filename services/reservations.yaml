@@ -15,7 +15,7 @@ spec:
         'consul.hashicorp.com/connect-inject': 'false'
     spec:
       containers:
-        - image: anzx10/reservations-microservice:v4.0
+        - image: anzx10/reservations-microservice:v4.1
           name: reservations-ms
           env:
             - name: DB_HOST
