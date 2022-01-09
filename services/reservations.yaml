@@ -12,10 +12,10 @@ spec:
       labels:
         app: reservations-ms
       annotations:        
-        'consul.hashicorp.com/connect-inject': 'true'
+        'consul.hashicorp.com/connect-inject': 'false'
     spec:
       containers:
-        - image: anzx10/reservations-microservice:v2.0
+        - image: anzx10/reservations-microservice:v4.0
           name: reservations-ms
           env:
             - name: DB_HOST
@@ -29,7 +29,7 @@ spec:
                 secretKeyRef:
                   name: reservations-ms
                   key: db-password
-                  
+
             - name: HOST_IP
               valueFrom:
                 fieldRef:

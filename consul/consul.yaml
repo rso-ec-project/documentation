@@ -13,24 +13,12 @@ connectInject:
   default: false
 controller:
   enabled: true
-ingressGateways:  
-  enabled: true 
-  gateways:    
-  - name: chargers-ingress-gateway  
-    replicas: 1    
-    service:        
-      type: LoadBalancer
-    ports:
-      - 8081
-  - name: comments-ingress-gateway
-    replicas: 1    
-    service:
-      type: LoadBalancer
-    ports:
-      - 8082
-  - name: reservations-ingress-gateway
-    replicas: 1
-    service:
-      type: LoadBalancer
-    ports:
-      - 8083
+# ingressGateways:  
+#   enabled: true 
+#   gateways:    
+#   - name: ingress-gateway  
+#     replicas: 1    
+#     service:        
+#       type: LoadBalancer
+#     ports:
+#       - 8080

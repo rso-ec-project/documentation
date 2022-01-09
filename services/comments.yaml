@@ -12,10 +12,10 @@ spec:
       labels:
         app: comments-ms
       annotations:        
-        'consul.hashicorp.com/connect-inject': 'true'
+        'consul.hashicorp.com/connect-inject': 'false'
     spec:
       containers:
-        - image: anzx10/comments-microservice:v2.0
+        - image: anzx10/comments-microservice:v4.0
           name: comments-ms
           env:
             - name: DB_HOST

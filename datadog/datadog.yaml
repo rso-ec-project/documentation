@@ -12,13 +12,7 @@ datadog:
       valueFrom:
         fieldRef:
           fieldPath: spec.nodeName
-    # hostCAPath: /etc/kubernetes/certs/kubeletserver.crt
-  livenessProbe:
-    exec:
-      command: ["/bin/true"]
-  readinessProbe:
-    exec:
-      command: ["/bin/true"]
+    hostCAPath: /etc/kubernetes/certs/kubeletserver.crt
   logs:
     enabled: true
     containerCollectAll: true
@@ -34,3 +28,4 @@ datadog:
     enableTCPQueueLength: false
     enableOOMKill: true
     collectDNSStats: false
+        

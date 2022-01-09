@@ -42,3 +42,7 @@ Use Helm to deploy an NGINX ingress controller
     --set defaultBackend.image.image=$DEFAULTBACKEND_IMAGE \
     --set defaultBackend.image.tag=$DEFAULTBACKEND_TAG \
     --set defaultBackend.image.digest=""
+
+Then apply the ingress.yaml file to expose services
+
+    kubectl apply -f ingress.yaml
